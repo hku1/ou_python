@@ -27,7 +27,7 @@ def dictvaluesfromto (dct: dict, fromval: float = None, toval:float = 0) -> dict
     pre: dct is dictionary with ints and/or floats, fromval is int, float, toval is int,float
     post: dictionary with  ints and/or floats
 
-    1. input dictionary, fromval, toval int or floats
+    1. input dictionary with ints and/or floats, fromval, toval int or floats
     >>> nmbrdict= {'a': 2, 'b': 4, 'c': 8.9}
     >>> print(dictvaluesfromto(nmbrdict, 2, 16))
     {'a': 16, 'b': 4, 'c': 8.9}
