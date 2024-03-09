@@ -32,31 +32,31 @@ def abc(a:int, b:int, c:int) -> list[float]:
     post: solved quadratic equation returning list x containing 1 or 2 floats
 
     1. valid parameters
-    >>> abc(1,2,3)
-    answer
+    >>> abc(1,5,6)
+    answer x[0] = -2, x[1] = -3
 
 
 
     """
     if not all(isinstance(value, int) for value in [a, b, c]):
-        raise TypeError("dictionary values must be ints or floats")
+        raise TypeError("a, b and c must be ints")
 
     if a == 0:
         raise ValueError('a should not be 0')
 
-    d = 0
-    def _discriminant():
+    def _discriminant(a, b, c):
         d = b**2 - 4*a*c
         return d
+
+    d = _discriminant(a, b, c)
 
     if d < 0:
         raise ValueError('no solutions with real numbers possible')
     else:
-        x = []
-        x.append = (-b + math.sqrt(d))/2*a
-        x.append = (-b - math.sqrt(d))/2*a
+        x = [(-b + math.sqrt(d)) / (2 * a), (-b - math.sqrt(d)) / (2 * a)]
         if x[0] == x[1]:
             x.pop(1)
-            return x
+        return x
 
 
+print(abc(1,5,6))
