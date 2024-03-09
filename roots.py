@@ -33,9 +33,24 @@ def abc(a:int, b:int, c:int) -> list[float]:
 
     1. valid parameters
     >>> abc(1,5,6)
-    answer x[0] = -2, x[1] = -3
+    [-2.0, -3.0]
 
+    2. D = 0 (1 solution)
+    >>> abc(1,2,1)
+    [-1.0]
 
+    pre-broken path
+    1. a, b, c not ints
+    >>> abc(1.5,5,6)
+    Traceback (most recent call last):
+    ...
+    TypeError: a, b and c must be ints
+
+    2. a = 0
+    >>> abc(0,5,6)
+    Traceback (most recent call last):
+    ...
+    ValueError: a should not be 0
 
     """
     if not all(isinstance(value, int) for value in [a, b, c]):
@@ -59,4 +74,3 @@ def abc(a:int, b:int, c:int) -> list[float]:
     return x
 
 
-qdrtc = abc(1,5,6)
