@@ -41,7 +41,7 @@ def dictvaluesfromto (dct: dict, fromval: float = None, toval:float = 0) -> dict
     2. dictionary contains non integers or floats
         raise TypeError("dictionary values must be ints or floats")
     >>> nmbrdict= {'a': 2, 'b': 4, 'c': 8.9, 'd': 'e'}
-    >>> print(dictvaluesfromto(lst, 2, 16))
+    >>> print(dictvaluesfromto(nmbrdict, 2, 16))
 
     3. fromval and/or toval not int or float
     >>> nmbrdict= {'a': 2, 'b': 4, 'c': 8.9}
