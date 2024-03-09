@@ -31,7 +31,7 @@ def abc(a:int, b:int, c:int) -> list[float]:
     pre: a int not 0, b int ,c int
     post: solved quadratic equation returning list x containing 1 or 2 floats
 
-    1. valid parameters
+    1. valid parameters, 2 solutions
     >>> abc(1,5,6)
     [-2.0, -3.0]
 
