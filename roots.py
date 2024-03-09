@@ -56,7 +56,7 @@ def abc(a:int, b:int, c:int) -> list[float]:
         x = [(-b + math.sqrt(d)) / (2 * a), (-b - math.sqrt(d)) / (2 * a)]
         if x[0] == x[1]:
             x.pop(1)
-            return x
+    return x
 
 
 qdrtc = abc(1,5,6)
